@@ -22,7 +22,7 @@ $(document).ready(function () {
       var hourDivAddClass = $("#hour-" + i);
       if (i < currentHour) {
         hourDivAddClass.addClass("past");
-      } else if (i === currentHour) {
+      } else if (i == currentHour) {
         hourDivAddClass.addClass("present");
       } else if (i > currentHour) {
         hourDivAddClass.addClass("future");
