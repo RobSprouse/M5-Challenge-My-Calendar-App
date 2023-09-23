@@ -1,44 +1,42 @@
-var dayjs = dayjs();
-var currentHour = dayjs.format("HH");
-console.log("This is the current hour " + currentHour);
+// COMMENT: Function that executes when the page is loaded.
+$(function displayCalendar() {
 
-$(document).ready(function () {
-  // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-  // the code isn't run until the browser has finished rendering all the elements
-  // in the html.
-  $(function displayCalendar() {
-    // TODO: Add a listener for click events on the save button. This code should
-    // use the id in the containing time-block as a key to save the user input in
-    // local storage. HINT: What does `this` reference in the click listener
-    // function? How can DOM traversal be used to get the "hour-x" id of the
-    // time-block containing the button that was clicked? How might the id be
-    // useful when saving the description in local storage?
-    //
-    // TODO: Add code to apply the past, present, or future class to each time
-    var startHour = 9;
-    var endHour = 18;
+  // COMMENT: Defines the const variables
+  const dayJs = dayjs();
+  const currentHour = dayJs.format("HH");
+  const startHour = 9;
+  const endHour = 17;
 
-    for (var i = startHour; i < endHour; i++) {
-      var hourDivAddClass = $("#hour-" + i);
-      if (i < currentHour) {
-        hourDivAddClass.addClass("past");
-      } else if (i == currentHour) {
-        hourDivAddClass.addClass("present");
-      } else if (i > currentHour) {
-        hourDivAddClass.addClass("future");
-      }
+  // COMMENT: Displays the current day in the header where #currentDay is located
+  $("#currentDay").text(dayJs.format("dddd, MMMM, DD, YYYY"));
+
+  // COMMENT: Uses the for i loop to condense the code
+  for (let i = startHour; i <= endHour; i++) {
+
+    // COMMENT: Defines the const variables containing i, i allows jquery to select the relevant id tags for each hour 
+    const hourDiv = $(`#hour-${i}`);
+    const saveBtn = $(`#hour${i}btn`);
+    const textDiv = $(`#hour${i}text`);
+   
+    // COMMENT: Retrieves the text that was stored within its corresponding hour id tag
+    const getStoredText = localStorage.getItem(`#hour${i}text`);
+    if (getStoredText) {
+      textDiv.val(getStoredText);
     }
 
-    // block by comparing the id to the current hour. HINTS: How can the id
-    // attribute of each time-block be used to conditionally add or remove the
-    // past, present, and future classes? How can Day.js be used to get the
-    // current hour in 24-hour time?
-    //
-    // TODO: Add code to get any user input that was saved in localStorage and set
-    // the values of the corresponding textarea elements. HINT: How can the id
-    // attribute of each time-block be used to do this?
-    //
-    // TODO: Add code to display the current date in the header of the page.
-    $("#currentDay").text(dayjs.format("dddd, MMMM, DD, YYYY"));
-  });
+    // COMMENT: Adds the class (past, present, or future) to the hour sections based on the defined currentHour
+    if (i < currentHour) {
+      hourDiv.addClass("past");
+    } else if (i == currentHour) {
+      hourDiv.addClass("present");
+    } else if (i > currentHour) {
+      hourDiv.addClass("future");
+    }
+
+    // COMMENT: Saves the text entered corresponding with its hour id tag
+    saveBtn.on("click", function () {
+      const storedText = textDiv.val();
+      localStorage.setItem(`#hour${i}text`, storedText);
+    });
+  }
 });

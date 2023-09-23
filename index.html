@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <!-- COMMENT: Meta data -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -11,103 +12,110 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/normalize.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="description" content="A work day scheduler">
+  <meta name="keywords" content="work day scheduler">
   <title>Work Day Scheduler</title>
 </head>
 
 <body>
+  <!-- COMMENT: Header containing the displayed current day -->
   <header class="p-5 mb-4 border-5 border-bottom border-dark text-center">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container-lg px-5">
 
-    <div id="hour-9" class="row time-block">
+  <div class="container-lg px-5">
+<!-- COMMENT: Sections divided by the hour -->
+    <section id="hour-9" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">9AM</div>
       <label for="hour9text" class="sr-only">Event entry for 9AM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour9text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour9btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-10" class="row time-block">
+    <section id="hour-10" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">10AM</div>
       <label for="hour10text" class="sr-only">Event entry for 10AM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour10text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour10btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-11" class="row time-block">
+    <section id="hour-11" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">11AM</div>
       <label for="hour11text" class="sr-only">Event entry for 11AM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour11text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour11btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-12" class="row time-block">
+    <section id="hour-12" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">12PM</div>
       <label for="hour12text" class="sr-only">Event entry for 12PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour12text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour12btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-13" class="row time-block">
+    <section id="hour-13" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">1PM</div>
       <label for="hour13text" class="sr-only">Event entry for 13PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour13text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour13btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-14" class="row time-block">
+    <section id="hour-14" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">2PM</div>
       <label for="hour14text" class="sr-only">Event entry for 2PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour14text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour14btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-15" class="row time-block">
+    <section id="hour-15" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">3PM</div>
       <label for="hour15text" class="sr-only">Event entry for 3PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour15text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour15btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-16" class="row time-block">
+    <section id="hour-16" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">4PM</div>
       <label for="hour16text" class="sr-only">Event entry for 4PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour16text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour16btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <div id="hour-17" class="row time-block">
+    <section id="hour-17" class="row time-block">
       <div class="col-2 col-md-1 hour text-center py-3 px-2">5PM</div>
       <label for="hour17text" class="sr-only">Event entry for 5PM</label>
       <textarea class="col-8 col-md-10 description" rows="3" id="hour17text"> </textarea>
-      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save">
+      <button class="btn saveBtn col-2 col-md-1" type="button" aria-label="save" id="hour17btn">
         <i class="fas fa-save" aria-hidden="true"></i>
       </button>
-    </div>
+    </section>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
-      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  </div>
 
-    <script src="./assets/js/script.js"></script>
+  <!-- COMMENT: Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>
