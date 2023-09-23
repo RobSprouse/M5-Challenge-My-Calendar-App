@@ -18,7 +18,7 @@ $(function displayCalendar() {
     const saveBtn = $(`#hour${i}btn`);
     const textDiv = $(`#hour${i}text`);
    
-    // COMMENT: Retrieves the text that was stored within its corresponding hour id tag
+    // COMMENT: Retrieves the text that was stored within its corresponding hour id tag and displays it appropriately
     const getStoredText = localStorage.getItem(`#hour${i}text`);
     if (getStoredText) {
       textDiv.val(getStoredText);
