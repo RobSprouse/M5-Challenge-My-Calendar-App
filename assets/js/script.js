@@ -8,7 +8,7 @@ $(function displayCalendar() {
   const endHour = 17;
 
   // COMMENT: Displays the current day in the header where #currentDay is located
-  $("#currentDay").text(dayJs.format("dddd, MMMM, DD, YYYY"));
+  $("#currentDay").text(dayJs.format("dddd, MMMM DD, YYYY"));
 
   // COMMENT: Uses the for i loop to condense the code
   for (let i = startHour; i <= endHour; i++) {
